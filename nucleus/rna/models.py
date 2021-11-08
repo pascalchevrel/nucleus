@@ -32,7 +32,8 @@ class ReleaseManager(models.Manager):
 class Release(SaveToGithubModel):
     CHANNELS = ('Nightly', 'Beta', 'Release', 'ESR')
     PRODUCTS = ('Firefox', 'Firefox for Android', 'Firefox for iOS',
-                'Firefox Extended Support Release', 'Thunderbird')
+                'Firefox Extended Support Release', 'Focus for Android',
+                'Focus for iOS', 'Thunderbird')
 
     product = models.CharField(max_length=255,
                                choices=[(p, p) for p in PRODUCTS])

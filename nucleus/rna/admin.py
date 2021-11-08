@@ -60,6 +60,10 @@ class ReleaseAdmin(admin.ModelAdmin):
             product = "firefox/android"
         if obj.product == "Firefox for iOS":
             product = "firefox/ios"
+        if obj.product == "Focus for Android":
+            product = "focus/android"
+        if obj.product == "Focus for iOS":
+            product = "focus/ios"
         elif obj.product == "Firefox" or obj.product == "Firefox Extended Support Release":
             product = "firefox"
         elif obj.product == "Thunderbird":
